@@ -1,0 +1,24 @@
+Durante el análisis, descubrí que había algunos ";" que estaban mal colocados y fuera de su ubicación habitual.
+Esto provocaba errores en el código y afectaba el funcionamiento del sitio web. Por lo tanto, procedí a corregirlos cuidadosamente,
+asegurándome de que cada ";" estuviera en su lugar correspondiente.
+
+Además, observé que algunas etiquetas de PHP estaban sin cerrar, al igual que algunas de HTML. Esta situación también causaba
+problemas en el código y podía generar errores en el sitio web. Para solucionarlo, me dediqué a cerrar todas las etiquetas que estaban abiertas,
+verificando que cada una de ellas tuviera su correspondiente cierre.
+
+También es importante mencionar que mientras realizaba el análisis, me di cuenta de que el archivo "orders_async" estaba causando algunos errores
+en la línea 6. Me tomó un tiempo descubrir la causa del problema, pero finalmente me di cuenta de que la línea de código "Orders::getInstance()->" 
+estaba generando una falla.
+
+Después de mucho análisis, decidí eliminar esta línea de código y comprobé su efecto en el servidor local de XAMPP. Para mi sorpresa,
+la página web comenzó a funcionar correctamente, lo cual indicaba que este era el problema.
+
+también encontré un problema en la línea 137 del código, donde la variable $exists generaba un error. Después de analizarla y buscar soluciones 
+en Google, llegué a la conclusión de que debía inicializarse con el valor "false" fuera del bucle "if" del código PHP. Luego, procedí a aplicar
+la misma solución a la variable $order, inicializándola también fuera del bucle "if". Esto aseguró que ambas variables tuvieran un valor asignado
+antes de ser utilizadas en el código, lo que tambien me hizo retirar el error en la pagina.
+
+Además de los problemas que encontré anteriormente, también noté que el botón de eliminación generaba más errores en otra ubicación de los archivos. 
+Después de analizar cuidadosamente los otros errores que aparecían en este mismo archivo, dediqué tiempo y esfuerzo para solucionarlos, pero 
+desafortunadamente no logré encontrar una solución. A pesar de mis mejores esfuerzos, a veces puede ser difícil identificar y solucionar 
+todos los problemas de un sitio web. A veces, se requiere más tiempo y recursos para corregir errores más complejos en el código.
